@@ -5,9 +5,4 @@ export default class CartRoute extends Route {
     const items = [{ price: 100 }, { price: 200 }];
     return items;
   }
-
-  // setupController(controller, model) {
-  //   super.setupController(controller, model);
-  //   controller.set('subtotal', subTotal);
-  // }
 }

@@ -37,10 +37,11 @@ export default class CartController extends Controller {
       case 'large':
         item.price = prices[size];
         item.size = size;
-        break
+        break;
       case 'x-large':
         item.price = prices[size];
         item.size = size;
+        break;
       default:
         item.price = prices[size];
         item.size = size;

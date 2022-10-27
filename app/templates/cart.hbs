@@ -11,20 +11,23 @@
 {{#each this.cartService.itemList as |item|}}
   <div class="cart-item d-flex align-items-center">
     <div class="cart-item-thumbnail mt-3">
-      <img src={{item.download_url}} alt="">
+      <img src={{item.download_url}} alt={{item.download_url}}>
     </div>
     <div class="ml-3">
       <h4>{{item.author}}</h4>
       <i class="font-weight-bold">{{ currency item.price}}</i>
     </div>
     <div class="action-btn">
-      <input
+      <label for="#count">Count</label>
+    <input
+    id="count"
     type="number"
     class="ml-auto"
     value={{item.count}}
     {{on "input" (fn this.updateItemCount item)}}
     >
-    <select value={{item.size}} {{on "input" (fn this.updatePriceBySize item)}}>
+    <label for="#size">Count</label>
+    <select value={{item.size}} id="size" {{on "input" (fn this.updatePriceBySize item)}}>
        <option value="small"> Small </option>
        <option value="medium"> Medium </option>
        <option value="large"> Large </option>

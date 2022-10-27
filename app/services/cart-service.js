@@ -45,7 +45,11 @@ export default class CartServiceService extends Service {
     let result = [];
     const exists = this.itemList.find((p) => p.url === item.url);
     if (exists) {
-      result = [...this.itemList.filter(p => p.url === item.url ? { ...p, size: item.size, price: item.size } : p)];
+      result = [
+        ...this.itemList.filter((p) =>
+          p.url === item.url ? { ...p, size: item.size, price: item.size } : p
+        ),
+      ];
     }
     return (this.itemList = [...result]);
   }
@@ -54,9 +58,8 @@ export default class CartServiceService extends Service {
     let result = [];
     const exists = this.itemList.find((p) => p.url === item.url);
     if (exists.count === 0) {
-      result = [...this.itemList.filter(p => p.url !== item.url)];
+      result = [...this.itemList.filter((p) => p.url !== item.url)];
     }
     this.itemList = [...result];
   }
-
 }

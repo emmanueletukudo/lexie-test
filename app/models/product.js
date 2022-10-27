@@ -14,7 +14,8 @@ export default class ProductModel extends Model {
   price;
   @attr({
     defaultValue() {
-      return "small";
+      return 'small';
     },
-  }) size;
+  })
+  size;
 }

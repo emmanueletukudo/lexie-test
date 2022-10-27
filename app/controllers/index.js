@@ -10,5 +10,4 @@ export default class IndexController extends Controller {
     const newRec = this.paginate.handlePageChange(n);
     this.model = newRec;
   }
-
 }
