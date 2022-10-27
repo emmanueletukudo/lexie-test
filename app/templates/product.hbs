@@ -1,0 +1,15 @@
+<Layout>
+  <div class="product item-details-page {{ if this.isZoomed 'is-zoomed'}}">
+   <Product::Image @src={{this.model.download_url}} @toggleZoom={{this.toggleZoom}}/>
+   <Product::Details
+   @isDetails={{true}}
+   @download_url={{this.model.download_url}}
+   @height={{this.model.height}}
+   @width={{ this.model.width}}
+   @price={{this.model.price}}
+   @author={{this.model.author}}
+   @url={{this.model.url}}
+   @size={{this.model.size}}
+   @onChangeColor={{this.onChangeColor}}/>
+   </div>
+</Layout>

@@ -1,0 +1,10 @@
+
+<nav aria-label="Page navigation justify-content-center">
+  <ul class="pagination">
+    {{#each this.pageNumbers as |n|}}
+      <li class="page-item">
+        <button class="page-link" type="button" {{ on "click" (fn @changePage n)}}>{{n}}</button>
+      </li>
+    {{/each}}
+  </ul>
+</nav>

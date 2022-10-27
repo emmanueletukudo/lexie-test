@@ -1,0 +1,17 @@
+<div class="product-details">
+      <section>
+        <h6><i class="bi bi-person-circle"></i> {{@author}} </h6>
+      </section>
+      <section class={{unless @isDetails 'h4'}}>
+        <del class="small text-black-50">{{ currency this.originalPrice}}</del>
+         <i class="text-danger font-weight-bold">{{ currency @price}}</i>
+      </section>
+      {{#if @isDetails}}
+      <div class="d-flex justify-content-center-between align-items-end">
+      <button class="btn btn-info" type="button" {{on "click" this.addToCart}}>
+         <i class="bi bi-cart"></i> Add to cart
+      </button>
+      </div>
+      {{/if}}
+
+    </div>

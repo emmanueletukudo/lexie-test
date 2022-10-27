@@ -1,0 +1,7 @@
+ <LinkTo @route="product" @model={{@product.id}}  class="product">
+  <Product::Image @src={{@product.download_url}}/>
+  <Product::Details
+  @author={{@product.author}}
+  @price={{@product.price}}
+  />
+  </LinkTo>

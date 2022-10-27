@@ -1,0 +1,9 @@
+<Layout>
+      <div class="products-wrapper">
+              {{#each this.model as |product|}}
+         <Product @product={{product}} />
+   {{/each}}
+      </div>
+
+   <Pagination @changePage={{this.handlePageChange}}/>
+</Layout>
